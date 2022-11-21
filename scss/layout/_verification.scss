@@ -44,6 +44,7 @@
             font-weight: 600;
         }
         &.is-active {
+            pointer-events: none;
             a {
                 border-color: $secondary;
                 border-bottom: 0px;
