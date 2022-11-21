@@ -23,10 +23,11 @@ $(function () {
 
         speed = parseInt(speed);
 
-    function trigerTab(thisTab) {
+    function trigerTab(thisTab, fadeIn) {
         $(tab).removeClass(tabActive);
         thisTab.addClass(tabActive);
         tabContent.hide();
+        fadeIn.fadeIn(speed * 2); 
         if (thisTab.index() == $(tab + ':last-child').index()) {
             $(tabWrapper).removeClass('verification__active-first');
             $(tabWrapper).addClass('verification__active-last');
@@ -38,16 +39,14 @@ $(function () {
 
     $(tab).on('click', function (e) {
         e.preventDefault();
-        trigerTab($(this));
-        let href = $(this).find('a').attr('href');
-        $(href).fadeIn(speed * 2);  
+        let href = $(this).find('a').attr('href'); 
+        trigerTab($(this), $(href));
         window.history.replaceState("", document.title, window.location.href.replace(location.hash, "") + $(this).find('a')[0].hash);
     }); //tab switching
 
     $(tab).each(function () {
         if ($(this).find('a').attr('href') == hash && $(this).is(':not(.'+ tabActive +')')) {
-            trigerTab($(this));
-            $(hash).fadeIn(speed * 2);  
+            trigerTab($(this), $(hash));
         }
     })
 
