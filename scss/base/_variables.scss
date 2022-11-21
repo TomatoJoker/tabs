@@ -1,0 +1,23 @@
+// colors
+$white: #FFFFFF;
+$body: #FEFEFE;
+$dark: #4F4F4F;
+$primary-dark: #0DD8CE;
+$primary: #1FD5CD;
+$primary-light: #BAEAFB;
+$secondary: #F8BD68;
+$third: #73CD6A;
+$third-light: #E9DD53;
+$fourth: #5E7EF2;
+$transparent: rgba(255, 255, 255, 0);
+
+
+// animation
+$speed: 300ms;
+$time-function: ease-in-out;
+
+// css variables for js animation
+:root {
+    --speed: #{$speed};
+    --time-function: #{$time-function};
+}

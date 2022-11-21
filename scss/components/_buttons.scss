@@ -1,0 +1,13 @@
+.button {
+    background-color: $primary-dark;
+    padding: 14px 24px;
+    border-radius: 666px;
+    @include font-settings(16, 19);
+    color: $white;
+    border: 1px solid $primary-dark;
+    font-weight: 700;
+    @include hover(color, border-color, background-color) {
+        color: $primary-dark;
+        background-color: $transparent;
+    }
+}

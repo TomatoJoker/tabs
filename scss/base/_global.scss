@@ -1,0 +1,74 @@
+body {
+    background-color: $body;
+    color: $dark;
+    font-family: 'Montserrat', sans-serif;
+    @include font-settings(10, 16);
+    box-sizing: border-box;
+}
+
+.container {
+    $padding: 30px;
+    max-width: 864px + $padding * 2;
+    padding: 0px $padding;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2, .h2-title, h3, .h3-title {
+    font-weight: 600;
+    display: inline-block;
+}
+
+h2, .h2-title {
+    @include font-settings(20, 24);
+}
+
+h3, .h3-title {
+    @include font-settings(14, 17);
+}
+
+.link {
+    color: $primary;
+    position: relative;
+    &::after {
+        content: '';
+        background-color: currentColor;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transform-origin: left;
+        transition: inherit;
+    }
+    @include hover(transform) {
+        &::after {
+            transform: scaleX(0);
+        }
+    }
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.icon {
+    fill: currentColor;
+    &__stroke {
+        stroke: currentColor;
+        fill: $transparent;
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.btn-hover {
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

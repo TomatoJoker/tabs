@@ -1,0 +1,149 @@
+.form {
+    padding-top: 59px;
+    padding-bottom: 76px;
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__sub-title {
+        margin-bottom: 6px;
+    }
+    &__item {
+        max-width: 364px;
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+    &__select {
+        $padding-x: 24px;
+        position: relative;
+        .select2-container {
+            &--below.select2-container--open.select2 {
+                .select2-selection {
+                    &--single {
+                        .select2-selection {
+                            &__arrow {
+                                transform: scale(1, -1);
+                            }
+                        }
+                    }
+                }
+            }
+            &.select2 {
+                .select2-selection {
+                    height: 48px;
+                    border: 1px solid $primary-light;
+                    @include transition(border-color);
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    &__rendered {
+                        padding-left: $padding-x;
+                        color: inherit;
+                        font-weight: 600;
+                        @include font-settings(16, 20);
+                    }
+                    &__arrow {
+                        transform-origin: center;
+                        $arrow-size: 8;
+                        width: calc(#{$padding-x} * 2 + #{$arrow-size + px});
+                        height: 100%;
+                        @include transition(transform);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 0px;
+                        b {
+                            border: none;
+                            background-image: url("data:image/svg+xml,%3Csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.58233 3.64645L1.93588 3.29289L1.58233 3.64645ZM5.35356 7.41768L5.00001 7.77124L5.35356 7.41768ZM5.35356 8.12479L5.70712 8.47834L5.35356 8.12479ZM4.64646 8.12479L5.00001 7.77124L4.64646 8.12479ZM0.875221 4.35355L0.521667 4.70711L0.875221 4.35355ZM1.93588 3.29289C1.54536 2.90237 0.912192 2.90237 0.521667 3.29289L1.22877 4H1.22877L1.93588 3.29289ZM5.70712 7.06413L1.93588 3.29289L1.22877 4L5.00001 7.77124L5.70712 7.06413ZM5.70712 8.47834C6.09764 8.08782 6.09764 7.45465 5.70712 7.06413L5.00001 7.77124L5.00001 7.77124L5.70712 8.47834ZM4.2929 8.47834C4.68343 8.86887 5.31659 8.86887 5.70712 8.47834L5.00001 7.77124L5.00001 7.77124L4.2929 8.47834ZM0.521667 4.70711L4.2929 8.47834L5.00001 7.77124L1.22877 4L0.521667 4.70711ZM0.521667 3.29289C0.131143 3.68342 0.131143 4.31658 0.521667 4.70711L1.22877 4V4L0.521667 3.29289ZM4.2929 7.06413C3.90238 7.45465 3.90238 8.08782 4.2929 8.47834L5.00001 7.77124L4.2929 7.06413ZM8.06414 3.29289L4.2929 7.06413L5.00001 7.77124L8.77125 4L8.06414 3.29289ZM9.47835 3.29289C9.08783 2.90237 8.45466 2.90237 8.06414 3.29289L8.77125 4L9.47835 3.29289ZM9.47835 4.70711C9.86888 4.31658 9.86888 3.68342 9.47835 3.29289L8.77125 4L9.47835 4.70711ZM5.70712 8.47834L9.47835 4.70711L8.77125 4L5.00001 7.77124L5.70712 8.47834ZM4.2929 8.47834C4.68343 8.86887 5.31659 8.86887 5.70712 8.47834L5.00001 7.77124L4.2929 8.47834Z' fill='%234F4F4F'/%3E%3C/svg%3E");
+                            @include size($arrow-size, 9);
+                            background-size: 100%;
+                            background-position: top;
+                            background-repeat: no-repeat;
+                            margin-top: 0px;
+                            margin-left: 0px;
+                            top: auto;
+                            left: auto;
+                        }
+                    }
+                }
+            }
+            &--open.select2 {
+                .select2-selection {
+                    border-color: $secondary;
+                }
+            }
+            &:not(.select2) {
+                transform-origin: top;
+                animation-name: scale-to-down;
+                animation-duration: $speed;
+                animation-timing-function: $time-function;
+                animation-fill-mode: forwards;
+                z-index: 1;
+                .select2-dropdown {
+                    border-radius: 10px;
+                    overflow: hidden;
+                    border-color: $primary-light;
+                    @include transition(border-color);
+                    .select2-results {
+                        &__options {
+                            padding: 10px 0px;
+                        }
+                        &__option {
+                            padding-left: $padding-x;
+                            padding-right: $padding-x;
+                            @include font-settings(16, 20);
+                            font-weight: 600;
+                            position: relative;
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                bottom: 0px;
+                                left: 0px;
+                                height: 1px;
+                                width: 100%;
+                                transform: scaleX(0);
+                                background-color: $primary-light;
+                                @include transition(transform);
+                                transform-origin: right;
+                            }
+                            &--disabled {
+                                display: none;
+                            }
+                            &--highlighted {
+                                color: inherit;
+                                &::after {
+                                    transform: scaleX(1);
+                                }
+                            }
+                            &--selected {
+                                &::after {
+                                    transform: scaleX(1);
+                                    background-color: $secondary;
+                                }
+                            }
+                            &--selected,
+                            &--highlighted {
+                                background-color: $transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes scale-to-down {
+    from {
+        opacity: 0;
+        top: 0px;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    to {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}

@@ -1,0 +1,96 @@
+//mixin as placeholder for font
+
+
+// anim
+@mixin transition($properties-list...) {
+    transition-duration: $speed;
+    transition-timing-function: $time-function;
+    transition-property: $properties-list;
+}
+
+
+// size
+@mixin size($width, $height: $width) {
+    width: $width + px;
+    height: $height + px;
+}
+
+// media screen
+@mixin media($width) {
+    @media only screen and (max-width: #{$width} + "px") {
+        @content;
+    }
+}
+
+@mixin min-media($width) {
+    @media only screen and (min-width: #{$width} + "px") {
+        @content;
+    }
+}
+
+// support hover or not
+@mixin hover($properties...) {
+    transition-property: $properties;
+    transition-duration: $speed;
+    transition-timing-function: $time-function;
+    @media (any-hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+//font-settings
+@mixin font-settings($size, $height) {
+    font-size: $size + px;
+    line-height: decimal-round( calc($height / $size), 2);
+}
+
+@function decimal-round($number, $digits: 0, $mode: round) {
+    $n: 1;
+    // $number must be a number
+    @if type-of($number) != number {
+      @warn '#{ $number } is not a number.';
+      @return $number;
+    }
+    // $digits must be a unitless number
+    @if type-of($digits) != number {
+      @warn '#{ $digits } is not a number.';
+      @return $number;
+    } @else if not unitless($digits) {
+      @warn '#{ $digits } has a unit.';
+      @return $number;
+    }
+    @if $digits > 0 {
+      @for $i from 1 through $digits {
+        $n: $n * 10;
+      }
+    }
+    @if $mode == round {
+      @return calc(round($number * $n) / $n);
+    } @else if $mode == ceil {
+      @return ceil($number * $n) / $n;
+    } @else if $mode == floor {
+      @return floor($number * $n) / $n;
+    } @else {
+      @warn '#{ $mode } is undefined keyword.';
+      @return $number;
+    }
+}
+
+@mixin hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@mixin flex-template($item, $gap: 0) {
+  flex-basis: calc((100% - #{$item - 1} * #{$gap}) / #{$item});
+}

@@ -1,0 +1,311 @@
+.verification {
+    &__tabs {
+        display: flex;
+    }
+    &__tab {
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        padding: 0px 8px;
+        &::before {
+            background-color: $white;
+            @include transition(visibility, bottom);
+        }
+        &::after {
+            background-color: #f4f5f6;
+            border-bottom: 1px solid $white;
+            @include transition(border-radius);
+        }
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            bottom: 0px;
+            z-index: -1;
+            visibility: hidden;
+        }
+        a {
+            border: 1px solid $white;
+            text-align: center;
+            border-radius: 12px 12px 0px 0px;
+            padding: 25px 0px 25px;
+            transform: scale(1) translateY(4px);
+            display: block;
+            @include font-settings(14px, 16px);
+            box-shadow: 0px 2px 14px rgba(106, 117, 124, 0.11);
+            flex-basis: 100%;
+            color: rgba($dark, 0.4);
+            @include transition(border, color, font-weight, transform);
+            background-color: $white;
+            transform: bottom;
+            font-weight: 600;
+        }
+        &.is-active {
+            a {
+                border-color: $secondary;
+                border-bottom: 0px;
+                color: $secondary;
+                transform: scale(1.039) translateY(0);
+                z-index: 2;
+            }
+            &::after {
+                @include transition(border-radius, visibility);
+            }
+            &::before,
+            &::after {
+                z-index: 3;
+                visibility: visible;
+                transition-delay: $speed;
+                border-color: $secondary;
+                display: block;
+            }
+        }
+    }
+    &__tab-first {
+        &::after {
+            border-left: 1px solid $white;
+        }
+        &::after,
+        &::before {
+            right: 1px;
+            transform: translateX(100%);
+        }
+        &.is-active {
+            &::after {
+                border-radius: 0px 0px 0px 12px;
+            }
+        }
+    }
+    &__tab-last {
+        .verification__amount {
+            background-color: $third;
+        }
+        &::after {
+            border-right: 1px solid $white;
+        }
+        &::after,
+        &::before {
+            left: 1px;
+            transform: translateX(-100%);
+        }
+        &.is-active {
+            a {
+                border-color: $third;
+                color: $third;
+            }
+            &::after {
+                border-color: $third;
+                border-radius: 0px 0px 12px 0px;
+            }
+        }
+    }
+    &__amount {
+        background-color: $secondary;
+        padding: 5px 6px;
+        @include font-settings(10, 12);
+        border-radius: 12px;
+        color: $white;
+        font-weight: 600;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        transform: translateY(-50%) translateX(4px);
+        z-index: 4;
+    }
+    &__body {
+        background: $white;
+        border: 1px solid $secondary;
+        position: relative;
+        top: -1px;
+        border-radius: 12px;
+        padding: 0px 1px;
+        @include transition(border-radius);
+    }
+    &__active-first {
+        border-top-left-radius: 0px;
+    }
+    &__active-last {
+        border-top-right-radius: 0px;
+        border-color: $third;
+    }
+    &__inner {
+        padding: 42px 20px;
+        position: relative;
+        z-index: 2;
+        background-color: $white;
+        border-radius: inherit;
+        max-width: calc(100% - 2px);
+    }
+    &__row {
+        border-radius: 10px;
+        border: 1px solid $primary-dark;
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+    &__row-open {
+        .verification {
+            &__toggle-btn {
+                color: $white;
+                .icon {
+                    transform: scale(1, -1);
+                }
+                &::before {
+                    transform: scale(1);
+                }
+            }
+            &__btn {
+                max-width: 100px;
+                background-color: $fourth;
+                color: $white;
+            }
+        }
+    }
+    &__small-text {
+        font-weight: 600;
+        span {
+            font-weight: normal;
+        }
+    }
+    &__small-gap {
+        margin-right: 36px;
+    }
+    &__gap {
+        margin-right: 46px;
+    }
+    &__top-col {
+        .verification__small-text {
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+    }
+    $padding-left: 16px;
+    &__form-top {
+        padding: 19px $padding-left;
+        display: flex;
+        align-items: center;
+        .verification__text {
+            max-width: 125px;
+        }
+    }
+    &__text {
+        color: rgba($dark, 0.4);
+        @include font-settings (12, 18);
+        span {
+            color: $dark;
+        }
+    }
+    &__green {
+        span {
+            color: $primary-dark;
+        }
+    }
+    &__form-bottom {
+        padding: 22px $padding-left;
+        display: none;
+    }
+    $size-button: 20;
+    &__toggle-btn {
+        position: absolute;
+        right: $padding-left;
+        top: 27px;
+        @include size(20);
+        border-radius: 50%;
+        @include transition(color, transform, opacity);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $primary-dark;
+        .icon {
+            @include transition(transform, stroke);
+        }
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            transform: scale(0);
+            position: absolute;
+            background-color: $primary-dark;
+            @include transition(transform);
+            z-index: -1;
+            left: 0px;
+            top: 0px;
+            transform-origin: center;
+        }
+    }
+    &__btn {
+        padding: 8.5px 10px;
+        border-radius: 16px;
+        @include font-settings(12, 15);
+        color: $fourth;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        @include transition(max-width, top, transform, background-color, opacity);
+        max-width: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: $padding-left + $size-button + 16px;
+        span {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .icon {
+            flex-shrink: 0;
+            @include transition(stroke);
+        }
+    }
+    &__left {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 86px;
+        row-gap: 16px;
+        align-items: center;
+        max-width: 558px;
+    }
+    &__status-wrapper {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+    }
+    &__status {
+        @include font-settings(12, 30);
+        border: 1px solid $dark;
+        background-color: rgba($dark, 0.2);
+        color: $dark;
+        padding: 0px 36px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    &__pending {
+        color: $secondary;
+        background-color: rgba($secondary, 0.2);
+        border-color: $secondary;
+    }
+    &__waiting {
+        color: $third-light;
+        background-color: rgba($third-light, 0.2);
+        border-color: $third-light;
+    }
+    &__bottom-col {
+        align-self: flex-start;
+        .verification__text {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+    &__text-row {
+        display: flex;
+        column-gap: 16px;
+    }
+
+}

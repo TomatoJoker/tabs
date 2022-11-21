@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <form action="" class="form">
+                <b class="form__title h2-title">Select Patient or <a class="link" href="#">Add New</a></b>
+                <div class="form__item">
+                    <label class="form__sub-title h3-title" for="pation">1. Patient</label>
+                    <div class="form__select js-select-container">
+                        <select class="js-select" name="user[pation]" id="pation">
+                            <option selected disabled></option>
+                            <option>lorem</option>
+                            <option>lorem</option>
+                            <option>lorem</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label class="form__sub-title h3-title" for="document">2. Select Document</label>
+                    <div class="form__select js-select-container">
+                        <select class="js-select" name="user[document]" id="document">
+                            <option selected disabled></option>
+                            <option>lorem</option>
+                            <option>lorem</option>
+                            <option>lorem</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="button" type="submit">Send Document</button>
+            </form>
+            <div class="verification">
+                <ul class="verification__tabs">
+                    <li class="verification__tab verification__tab-first js-tab is-active">
+                        <a href="#draft">Draft</a>
+                        <sup class="verification__amount">5043</sup>
+                    </li>
+                    <li class="verification__tab verification__tab-last js-tab">
+                        <a href="#sent">Sent</a>
+                        <sup class="verification__amount">196</sup>
+                    </li>
+                </ul>
+                <div class="verification__body js-tab-wrapper verification__active-first">
+                    <div class="verification__inner">
+                        <div class="js-tab-block" id="draft">
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__pending">
+                                                Pending
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__pending">
+                                                Pending
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__pending">
+                                                Pending
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__pending">
+                                                Pending
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__waiting">
+                                                Waiting
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="js-tab-block" id="sent" style="display: none;">
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__pending">
+                                                Pending
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__pending">
+                                                Pending
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__pending">
+                                                Pending
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__pending">
+                                                Pending
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <form action="" class="verification__row js-accordion-parrent">
+                                <div class="verification__form-top js-accordion-top">
+                                    <div class="verification__small-gap verification__small-text">Test Export Type</div>
+                                    <div class="verification__gap verification__text bold verification__green">
+                                        <span>
+                                            Laurence
+                                            Dinwiddie<br>Fon Junior
+                                        </span>
+                                    </div>
+                                    <div class="verification__small-gap verification__top-col">
+                                        <div class="verification__small-text"><span>Date of birth:</span> 06.11.1994
+                                        </div>
+                                        <div class="verification__small-text">laurence.dinwiddie@gmail.com</div>
+                                    </div>
+                                    <div class="verification__small-gap verification__small-text">draft on <br>
+                                        24.06.2019, 07:20</div>
+                                    <div class="verification__small-gap verification__small-text"><span>ID: 24062021
+                                        </span></div>
+                                </div>
+                                <div class="verification__form-bottom js-accordion-bottom">
+                                    <div class="verification__left">
+                                        <div class="verification__status-wrapper verification__text ">
+                                            <span>BAG Report:</span>
+                                            <div class="verification__status verification__waiting">
+                                                Waiting
+                                            </div>
+                                        </div>
+                                        <div class="verification__text">
+                                            ID: <span>24062021</span>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text">
+                                                ID: <span class="bold">Test Export Type</span>
+                                            </div>
+                                            <div class="verification__text">
+                                                Date: <span>draft on</span> <span class="bold">24.06.2019, 07:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="verification__bottom-col">
+                                            <div class="verification__text verification__green">
+                                                Full name: <span class="bold">Laurence Dinwiddie Fon Junior</span>
+                                            </div>
+                                            <div class="verification__text-row">
+                                                <div class="verification__text">
+                                                    Age: <span class="bold">32</span>
+                                                </div>
+                                                <div class="verification__text">
+                                                    Date of birth: <span class="bold">06.11.1994</span>
+                                                </div>
+                                            </div>
+                                            <div class="verification__text">
+                                                Email: <span class="bold">laurence.dinwiddie@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="verification__btn btn-hover">
+                                    <span>Send</span>
+                                    <svg width="16" height="12" class="icon">
+                                        <use href="./icon/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="verification__toggle-btn js-accordion-button btn-hover"
+                                    aria-lebel="More information">
+                                    <svg width="10" height="6" class="icon icon__stroke">
+                                        <use href="./icon/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
